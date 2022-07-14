@@ -1,0 +1,12 @@
+steps:
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args:
+  - gcloud
+  - functions
+  - deploy
+  - delete_unattached_pds
+  - --region=us-central1
+  - --source=.
+  - --trigger-http
+  - --runtime=python310
+  dir: 'unattached-pd'
